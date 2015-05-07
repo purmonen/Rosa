@@ -15,6 +15,8 @@
 		26B97E391AFBADB300E24BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E381AFBADB300E24BC5 /* Images.xcassets */; };
 		26B97E3C1AFBADB400E24BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */; };
 		26B97E481AFBADB400E24BC5 /* RosaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E471AFBADB400E24BC5 /* RosaTests.swift */; };
+		DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB11AFBF8930059A3AB /* Sensor.swift */; };
+		DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		26B97E411AFBADB400E24BC5 /* RosaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RosaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B97E461AFBADB400E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B97E471AFBADB400E24BC5 /* RosaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaTests.swift; sourceTree = "<group>"; };
+		DA159BB11AFBF8930059A3AB /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				26B97E381AFBADB300E24BC5 /* Images.xcassets */,
 				26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */,
 				26B97E2F1AFBADB300E24BC5 /* Supporting Files */,
+				DA159BB11AFBF8930059A3AB /* Sensor.swift */,
+				DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */,
 			);
 			path = Rosa;
 			sourceTree = "<group>";
@@ -219,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */,
+				DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */,
+				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
 				26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */,
 				2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */,
 				26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */,

@@ -12,10 +12,10 @@ import UIKit
 class SensorTableViewController: UITableViewController {
 
     let sensors = [
-        "192.234.345.456",
-        "192.234.345.457",
-        "192.234.345.458",
-        "192.234.345.459",
+        Sensor(name: "123.123.123.1", temperature: 21, isConnected: true),
+        Sensor(name: "123.321.123.2", temperature: 24, isConnected: true),
+        Sensor(name: "123.123.123.3", temperature: 18, isConnected: false),
+        Sensor(name: "123.123.123.4", temperature: 28, isConnected: true),
     ]
     
     override func viewDidLoad() {
@@ -49,10 +49,13 @@ class SensorTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SensorTableViewCell", forIndexPath: indexPath) as! UITableViewCell
+        let sensor = sensors[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("SensorTableViewCell", forIndexPath: indexPath) as! SensorTableViewCell
 
-        cell.textLabel?.text = sensors[indexPath.row]
-
+        cell.nameLabel?.text = sensors[indexPath.row].name
+        cell.connectedLabel.textColor = sensor.isConnected ? UIColor.greenColor() : UIColor.redColor()
+        let zebra = "-"
+        cell.temperatureLabel.text = sensor.isConnected ? "\(sensor.temperature) °C" : ""
         return cell
     }
     

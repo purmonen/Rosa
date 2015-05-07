@@ -10,12 +10,15 @@ import UIKit
 
 class SensorViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
-    var sensor = ""
+    var sensor:Sensor?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = sensor
+        if let sensor = sensor{
+            nameLabel.text = "\(sensor.name) \(sensor.temperature)°C"
+            
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
