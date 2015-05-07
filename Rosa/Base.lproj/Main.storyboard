@@ -38,13 +38,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last camera image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-er-zkb">
-                                <rect key="frame" x="40" y="79" width="147" height="21"/>
+                                <rect key="frame" x="26" y="79" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coj-Ph-iZE">
-                                <rect key="frame" x="40" y="248" width="145" height="60"/>
+                                <rect key="frame" x="26" y="248" width="145" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="PJL-er-zkb" firstAttribute="leading" secondItem="Coj-Ph-iZE" secondAttribute="leading" id="7Wu-Xz-mIh"/>
                             <constraint firstItem="qnk-iL-wES" firstAttribute="centerX" secondItem="bzy-EY-603" secondAttribute="centerX" id="82v-eA-W0w"/>
                             <constraint firstItem="bzy-EY-603" firstAttribute="top" secondItem="Coj-Ph-iZE" secondAttribute="bottom" constant="5" id="CdS-Vq-Y3N"/>
-                            <constraint firstItem="qnk-iL-wES" firstAttribute="leading" secondItem="PJL-er-zkb" secondAttribute="leading" constant="-14" id="IJQ-sd-Hja"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="leading" secondItem="PJL-er-zkb" secondAttribute="leading" id="IJQ-sd-Hja"/>
                             <constraint firstItem="bzy-EY-603" firstAttribute="top" secondItem="qnk-iL-wES" secondAttribute="bottom" constant="80" id="Ito-wc-1Mf"/>
                             <constraint firstItem="Coj-Ph-iZE" firstAttribute="top" secondItem="qnk-iL-wES" secondAttribute="bottom" constant="15" id="ZaK-hH-066"/>
                             <constraint firstItem="qnk-iL-wES" firstAttribute="width" secondItem="bzy-EY-603" secondAttribute="width" id="aPU-1y-WpU"/>
