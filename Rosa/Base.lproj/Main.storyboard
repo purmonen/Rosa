@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MSu-jN-r3O">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,75 +17,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="over_big" translatesAutoresizingMaskIntoConstraints="NO" id="qnk-iL-wES">
-                                <rect key="frame" x="6" y="105" width="400" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="21V-x6-mdK"/>
-                                    <constraint firstAttribute="width" secondItem="qnk-iL-wES" secondAttribute="height" multiplier="4:3" id="Mxp-6I-OEx"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="21V-x6-mdK"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last camera image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-er-zkb">
-                                <rect key="frame" x="26" y="74" width="548" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="H6s-vm-2Cy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coj-Ph-iZE">
-                                <rect key="frame" x="26" y="382" width="548" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="w5z-oN-Q3I"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-EY-603" customClass="TemperatureView" customModule="Rosa" customModuleProvider="target">
-                                <rect key="frame" x="26" y="452" width="548" height="138"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="6vK-3a-FDr"/>
-                                    <constraint firstAttribute="height" constant="138" id="Ye3-EF-soU"/>
-                                </constraints>
-                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-Oy-Grw">
+                                <rect key="frame" x="211" y="74" width="179" height="29"/>
+                                <segments>
+                                    <segment title="Camera"/>
+                                    <segment title="Temperature"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changedView:" destination="GaL-9l-H62" eventType="valueChanged" id="lEj-w3-Poh"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVi-po-llI">
+                                <rect key="frame" x="16" y="112" width="568" height="478"/>
+                                <connections>
+                                    <segue destination="GtX-DH-9og" kind="embed" id="iBN-SL-ary"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Coj-Ph-iZE" secondAttribute="centerX" id="BS4-ux-wcg"/>
-                            <constraint firstItem="PJL-er-zkb" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" constant="10" id="KCh-9K-Zm3"/>
-                            <constraint firstItem="bzy-EY-603" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" constant="10" id="M7T-DN-7Bp"/>
-                            <constraint firstItem="bzy-EY-603" firstAttribute="top" secondItem="Coj-Ph-iZE" secondAttribute="bottom" constant="10" id="MbJ-7X-l01"/>
-                            <constraint firstAttribute="centerX" secondItem="bzy-EY-603" secondAttribute="centerX" id="OrU-8z-lIY"/>
-                            <constraint firstItem="PJL-er-zkb" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="10" id="aPK-LC-phA"/>
-                            <constraint firstItem="qnk-iL-wES" firstAttribute="top" secondItem="PJL-er-zkb" secondAttribute="bottom" constant="10" id="b1F-8e-Aac"/>
-                            <constraint firstItem="qnk-iL-wES" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" constant="-10" id="d3A-sr-nlH"/>
-                            <constraint firstAttribute="centerX" secondItem="PJL-er-zkb" secondAttribute="centerX" id="kFx-Ax-Uxt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qnk-iL-wES" secondAttribute="trailing" constant="10" id="ktB-Ij-NDW"/>
-                            <constraint firstItem="Coj-Ph-iZE" firstAttribute="top" secondItem="qnk-iL-wES" secondAttribute="bottom" constant="10" id="xHZ-ZP-JlP"/>
-                            <constraint firstItem="Coj-Ph-iZE" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" constant="10" id="yfv-UC-g5p"/>
-                            <constraint firstItem="qnk-iL-wES" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="41" id="zVD-gG-eCW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MVi-po-llI" secondAttribute="trailing" id="3eL-NE-zsG"/>
+                            <constraint firstAttribute="centerX" secondItem="kLa-Oy-Grw" secondAttribute="centerX" id="C4P-bo-96A"/>
+                            <constraint firstItem="MVi-po-llI" firstAttribute="top" secondItem="kLa-Oy-Grw" secondAttribute="bottom" constant="10" id="DnQ-6e-Ldq"/>
+                            <constraint firstItem="MVi-po-llI" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" id="FFK-Wl-nKd"/>
+                            <constraint firstItem="kLa-Oy-Grw" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="10" id="Tdn-o5-tJf"/>
+                            <constraint firstItem="haC-yu-UWS" firstAttribute="top" secondItem="MVi-po-llI" secondAttribute="bottom" constant="10" id="uS8-eI-sY7"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="zVD-gG-eCW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sensor" id="yad-Ep-eJL"/>
                     <connections>
-                        <outlet property="cameraImageView" destination="qnk-iL-wES" id="3cg-HO-uMy"/>
+                        <outlet property="containerView" destination="MVi-po-llI" id="qQv-Wh-56K"/>
+                        <outlet property="segmentedControl" destination="kLa-Oy-Grw" id="N42-T7-MtO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50I-d4-W19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160" y="2194"/>
+            <point key="canvasLocation" x="1060" y="2188"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="6Kk-9v-kIc">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="NIn-Kx-NQb" customClass="CameraViewController" customModule="Rosa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GXm-UV-9mI"/>
+                        <viewControllerLayoutGuide type="bottom" id="ihJ-8a-nep"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ikV-cM-noj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_big" translatesAutoresizingMaskIntoConstraints="NO" id="N5Y-eh-bY4">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ihJ-8a-nep" firstAttribute="top" secondItem="N5Y-eh-bY4" secondAttribute="bottom" id="Kp5-8G-Z6Q"/>
+                            <constraint firstItem="N5Y-eh-bY4" firstAttribute="trailing" secondItem="ikV-cM-noj" secondAttribute="trailingMargin" id="qWx-2l-xGs"/>
+                            <constraint firstItem="N5Y-eh-bY4" firstAttribute="leading" secondItem="ikV-cM-noj" secondAttribute="leadingMargin" id="tp1-bz-oB5"/>
+                            <constraint firstItem="N5Y-eh-bY4" firstAttribute="top" secondItem="GXm-UV-9mI" secondAttribute="bottom" id="v36-Ix-2aA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraImage" destination="N5Y-eh-bY4" id="xLp-XE-AbS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dw-wQ-BLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="2888"/>
+        </scene>
+        <!--Temperature View Controller-->
+        <scene sceneID="f2a-ui-Qvm">
+            <objects>
+                <viewController storyboardIdentifier="TemperatureViewController" id="ESg-et-WJ2" customClass="TemperatureViewController" customModule="Rosa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mq7-Ar-q46"/>
+                        <viewControllerLayoutGuide type="bottom" id="8dZ-yo-9DB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QbV-Dh-uhF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tf7-QR-Njw" customClass="TemperatureView" customModule="Rosa" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tf7-QR-Njw" firstAttribute="leading" secondItem="QbV-Dh-uhF" secondAttribute="leadingMargin" id="0Oi-Jq-mbR"/>
+                            <constraint firstItem="tf7-QR-Njw" firstAttribute="trailing" secondItem="QbV-Dh-uhF" secondAttribute="trailingMargin" id="KMT-bg-Fdu"/>
+                            <constraint firstItem="tf7-QR-Njw" firstAttribute="top" secondItem="QbV-Dh-uhF" secondAttribute="topMargin" id="hQr-kV-ZnB"/>
+                            <constraint firstItem="8dZ-yo-9DB" firstAttribute="top" secondItem="tf7-QR-Njw" secondAttribute="bottom" id="yiM-Hd-2J8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="temperatureView" destination="tf7-QR-Njw" id="o5s-Zb-sAf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tW0-JA-cnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="2902"/>
         </scene>
         <!--Sensors-->
         <scene sceneID="cp8-Ke-XML">
@@ -210,6 +241,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kW-DH-AO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="348" y="2194"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B0O-gP-EuA">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GtX-DH-9og" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wdZ-0n-hZv"/>
+                        <viewControllerLayoutGuide type="bottom" id="FpW-Nv-ILJ"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Z9-fj-Edr">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="478"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ple-a6-Cdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="2250"/>
         </scene>
     </scenes>
     <resources>
