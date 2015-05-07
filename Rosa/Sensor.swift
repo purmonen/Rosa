@@ -12,5 +12,6 @@ struct Sensor {
     let name:String
     let temperature:Double
     let isConnected:Bool
+    let imageData:NSData
 }
 

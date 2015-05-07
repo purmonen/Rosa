@@ -11,16 +11,26 @@ import UIKit
 
 class SensorTableViewController: UITableViewController {
 
-    let sensors = [
-        Sensor(name: "123.123.123.1", temperature: 21, isConnected: true),
-        Sensor(name: "123.321.123.2", temperature: 24, isConnected: true),
-        Sensor(name: "123.123.123.3", temperature: 18, isConnected: false),
-        Sensor(name: "123.123.123.4", temperature: 28, isConnected: true),
-    ]
+    var sensors :[Sensor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //NSOperationQueue().addOperationWithBlock { () -> Void in
+            if let  data = databaseConnector().getAllReadings() as? NSArray{
+                for tmp in data{
+                    if let tmp = tmp as? [String:AnyObject]{
+                        let ip = tmp["ip"] as? String
+                        let temperature = tmp["temp"] as? Double
+                        let image = tmp["image"] as? String
+                        if let ip = ip, temperature = temperature, imageData = NSData(base64EncodedString: image!, options: nil){
+                            sensors.append(Sensor(name: ip, temperature: temperature, isConnected: true, imageData: imageData))
+                        }
+                    }
+                    
+                }
+            }
+        //}
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

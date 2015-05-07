@@ -17,6 +17,7 @@
 		26B97E481AFBADB400E24BC5 /* RosaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E471AFBADB400E24BC5 /* RosaTests.swift */; };
 		DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB11AFBF8930059A3AB /* Sensor.swift */; };
 		DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */; };
+		DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB51AFC084B0059A3AB /* databaseConnector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		26B97E471AFBADB400E24BC5 /* RosaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaTests.swift; sourceTree = "<group>"; };
 		DA159BB11AFBF8930059A3AB /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
+		DA159BB51AFC084B0059A3AB /* databaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = databaseConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				26B97E2F1AFBADB300E24BC5 /* Supporting Files */,
 				DA159BB11AFBF8930059A3AB /* Sensor.swift */,
 				DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */,
+				DA159BB51AFC084B0059A3AB /* databaseConnector.swift */,
 			);
 			path = Rosa;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */,
 				DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */,
+				DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */,
 				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
 				26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */,
 				2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */,
