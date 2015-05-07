@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MSu-jN-r3O">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-yO-4YU">
-                                <rect key="frame" x="16" y="74" width="568" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="over_big" translatesAutoresizingMaskIntoConstraints="NO" id="qnk-iL-wES">
+                                <rect key="frame" x="26" y="105" width="548" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="21V-x6-mdK"/>
+                                    <constraint firstAttribute="width" secondItem="qnk-iL-wES" secondAttribute="height" multiplier="137:32" id="2Zr-HV-m8j"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="21V-x6-mdK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzy-EY-603" customClass="TemperatureView" customModule="Rosa" customModuleProvider="target">
+                                <rect key="frame" x="26" y="313" width="548" height="138"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="MTg-OA-V3H"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last camera image" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-er-zkb">
+                                <rect key="frame" x="40" y="79" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coj-Ph-iZE">
+                                <rect key="frame" x="40" y="248" width="145" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,15 +52,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QNO-yO-4YU" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="10" id="7u0-DQ-Fcu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QNO-yO-4YU" secondAttribute="trailing" id="CwY-4Y-zCJ"/>
-                            <constraint firstItem="QNO-yO-4YU" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" id="ltT-gt-BDw"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" constant="10" id="2tG-fR-eUI"/>
+                            <constraint firstItem="PJL-er-zkb" firstAttribute="leading" secondItem="Coj-Ph-iZE" secondAttribute="leading" id="7Wu-Xz-mIh"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="centerX" secondItem="bzy-EY-603" secondAttribute="centerX" id="82v-eA-W0w"/>
+                            <constraint firstItem="bzy-EY-603" firstAttribute="top" secondItem="Coj-Ph-iZE" secondAttribute="bottom" constant="5" id="CdS-Vq-Y3N"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="leading" secondItem="PJL-er-zkb" secondAttribute="leading" constant="-14" id="IJQ-sd-Hja"/>
+                            <constraint firstItem="bzy-EY-603" firstAttribute="top" secondItem="qnk-iL-wES" secondAttribute="bottom" constant="80" id="Ito-wc-1Mf"/>
+                            <constraint firstItem="Coj-Ph-iZE" firstAttribute="top" secondItem="qnk-iL-wES" secondAttribute="bottom" constant="15" id="ZaK-hH-066"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="width" secondItem="bzy-EY-603" secondAttribute="width" id="aPU-1y-WpU"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="top" secondItem="PJL-er-zkb" secondAttribute="bottom" constant="5" id="awI-MO-A5p"/>
+                            <constraint firstItem="PJL-er-zkb" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="15" id="vUH-s0-mML"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qnk-iL-wES" secondAttribute="trailing" constant="10" id="zSu-4f-q4P"/>
+                            <constraint firstItem="qnk-iL-wES" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="41" id="zVD-gG-eCW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zVD-gG-eCW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sensor" id="yad-Ep-eJL"/>
-                    <connections>
-                        <outlet property="nameLabel" destination="QNO-yO-4YU" id="nc8-4f-neQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50I-d4-W19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,6 +201,9 @@
             <point key="canvasLocation" x="348" y="2194"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="over_big" width="640" height="480"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Lpx-Jp-dzc"/>
     </inferredMetricsTieBreakers>

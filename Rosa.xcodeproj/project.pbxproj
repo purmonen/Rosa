@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */; };
 		2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612E4E81AFBB1C70064B687 /* SensorViewController.swift */; };
+		2637CCD81AFC06F000866422 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637CCD71AFC06F000866422 /* TemperatureView.swift */; };
 		26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E311AFBADB300E24BC5 /* AppDelegate.swift */; };
 		26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E331AFBADB300E24BC5 /* ViewController.swift */; };
 		26B97E371AFBADB300E24BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E351AFBADB300E24BC5 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
 		2612E4E81AFBB1C70064B687 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
+		2637CCD71AFC06F000866422 /* TemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		26B97E2C1AFBADB300E24BC5 /* Rosa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rosa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B97E301AFBADB300E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B97E311AFBADB300E24BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				26B97E331AFBADB300E24BC5 /* ViewController.swift */,
 				2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */,
 				2612E4E81AFBB1C70064B687 /* SensorViewController.swift */,
+				2637CCD71AFC06F000866422 /* TemperatureView.swift */,
 				26B97E351AFBADB300E24BC5 /* Main.storyboard */,
 				26B97E381AFBADB300E24BC5 /* Images.xcassets */,
 				26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */,
@@ -229,6 +232,7 @@
 				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
 				26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */,
 				2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */,
+				2637CCD81AFC06F000866422 /* TemperatureView.swift in Sources */,
 				26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
