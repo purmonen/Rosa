@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E311AFBADB300E24BC5 /* AppDelegate.swift */; };
+		26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E331AFBADB300E24BC5 /* ViewController.swift */; };
+		26B97E371AFBADB300E24BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E351AFBADB300E24BC5 /* Main.storyboard */; };
+		26B97E391AFBADB300E24BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E381AFBADB300E24BC5 /* Images.xcassets */; };
+		26B97E3C1AFBADB400E24BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */; };
+		26B97E481AFBADB400E24BC5 /* RosaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E471AFBADB400E24BC5 /* RosaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26B97E421AFBADB400E24BC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26B97E241AFBADB300E24BC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26B97E2B1AFBADB300E24BC5;
+			remoteInfo = Rosa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26B97E2C1AFBADB300E24BC5 /* Rosa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rosa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B97E301AFBADB300E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B97E311AFBADB300E24BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		26B97E331AFBADB300E24BC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26B97E361AFBADB300E24BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26B97E381AFBADB300E24BC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		26B97E3B1AFBADB400E24BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		26B97E411AFBADB400E24BC5 /* RosaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RosaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26B97E461AFBADB400E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26B97E471AFBADB400E24BC5 /* RosaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26B97E291AFBADB300E24BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B97E3E1AFBADB400E24BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26B97E231AFBADB300E24BC5 = {
+			isa = PBXGroup;
+			children = (
+				26B97E2E1AFBADB300E24BC5 /* Rosa */,
+				26B97E441AFBADB400E24BC5 /* RosaTests */,
+				26B97E2D1AFBADB300E24BC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26B97E2D1AFBADB300E24BC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26B97E2C1AFBADB300E24BC5 /* Rosa.app */,
+				26B97E411AFBADB400E24BC5 /* RosaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26B97E2E1AFBADB300E24BC5 /* Rosa */ = {
+			isa = PBXGroup;
+			children = (
+				26B97E311AFBADB300E24BC5 /* AppDelegate.swift */,
+				26B97E331AFBADB300E24BC5 /* ViewController.swift */,
+				26B97E351AFBADB300E24BC5 /* Main.storyboard */,
+				26B97E381AFBADB300E24BC5 /* Images.xcassets */,
+				26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */,
+				26B97E2F1AFBADB300E24BC5 /* Supporting Files */,
+			);
+			path = Rosa;
+			sourceTree = "<group>";
+		};
+		26B97E2F1AFBADB300E24BC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26B97E301AFBADB300E24BC5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26B97E441AFBADB400E24BC5 /* RosaTests */ = {
+			isa = PBXGroup;
+			children = (
+				26B97E471AFBADB400E24BC5 /* RosaTests.swift */,
+				26B97E451AFBADB400E24BC5 /* Supporting Files */,
+			);
+			path = RosaTests;
+			sourceTree = "<group>";
+		};
+		26B97E451AFBADB400E24BC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26B97E461AFBADB400E24BC5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26B97E2B1AFBADB300E24BC5 /* Rosa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26B97E4B1AFBADB400E24BC5 /* Build configuration list for PBXNativeTarget "Rosa" */;
+			buildPhases = (
+				26B97E281AFBADB300E24BC5 /* Sources */,
+				26B97E291AFBADB300E24BC5 /* Frameworks */,
+				26B97E2A1AFBADB300E24BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rosa;
+			productName = Rosa;
+			productReference = 26B97E2C1AFBADB300E24BC5 /* Rosa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26B97E401AFBADB400E24BC5 /* RosaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26B97E4E1AFBADB400E24BC5 /* Build configuration list for PBXNativeTarget "RosaTests" */;
+			buildPhases = (
+				26B97E3D1AFBADB400E24BC5 /* Sources */,
+				26B97E3E1AFBADB400E24BC5 /* Frameworks */,
+				26B97E3F1AFBADB400E24BC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26B97E431AFBADB400E24BC5 /* PBXTargetDependency */,
+			);
+			name = RosaTests;
+			productName = RosaTests;
+			productReference = 26B97E411AFBADB400E24BC5 /* RosaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26B97E241AFBADB300E24BC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Sami Purmonen";
+				TargetAttributes = {
+					26B97E2B1AFBADB300E24BC5 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					26B97E401AFBADB400E24BC5 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 26B97E2B1AFBADB300E24BC5;
+					};
+				};
+			};
+			buildConfigurationList = 26B97E271AFBADB300E24BC5 /* Build configuration list for PBXProject "Rosa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26B97E231AFBADB300E24BC5;
+			productRefGroup = 26B97E2D1AFBADB300E24BC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26B97E2B1AFBADB300E24BC5 /* Rosa */,
+				26B97E401AFBADB400E24BC5 /* RosaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26B97E2A1AFBADB300E24BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B97E371AFBADB300E24BC5 /* Main.storyboard in Resources */,
+				26B97E3C1AFBADB400E24BC5 /* LaunchScreen.xib in Resources */,
+				26B97E391AFBADB300E24BC5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B97E3F1AFBADB400E24BC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26B97E281AFBADB300E24BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */,
+				26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26B97E3D1AFBADB400E24BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26B97E481AFBADB400E24BC5 /* RosaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26B97E431AFBADB400E24BC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26B97E2B1AFBADB300E24BC5 /* Rosa */;
+			targetProxy = 26B97E421AFBADB400E24BC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26B97E351AFBADB300E24BC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26B97E361AFBADB300E24BC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26B97E3B1AFBADB400E24BC5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26B97E491AFBADB400E24BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26B97E4A1AFBADB400E24BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26B97E4C1AFBADB400E24BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Rosa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26B97E4D1AFBADB400E24BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Rosa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26B97E4F1AFBADB400E24BC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RosaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rosa.app/Rosa";
+			};
+			name = Debug;
+		};
+		26B97E501AFBADB400E24BC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RosaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rosa.app/Rosa";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26B97E271AFBADB300E24BC5 /* Build configuration list for PBXProject "Rosa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B97E491AFBADB400E24BC5 /* Debug */,
+				26B97E4A1AFBADB400E24BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26B97E4B1AFBADB400E24BC5 /* Build configuration list for PBXNativeTarget "Rosa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B97E4C1AFBADB400E24BC5 /* Debug */,
+				26B97E4D1AFBADB400E24BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26B97E4E1AFBADB400E24BC5 /* Build configuration list for PBXNativeTarget "RosaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26B97E4F1AFBADB400E24BC5 /* Debug */,
+				26B97E501AFBADB400E24BC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26B97E241AFBADB300E24BC5 /* Project object */;
+}
