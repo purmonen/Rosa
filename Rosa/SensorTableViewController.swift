@@ -9,6 +9,8 @@
 import UIKit
 
 
+
+
 class SensorTableViewController: UITableViewController {
 
     var sensors :[Sensor] = []
@@ -107,8 +109,9 @@ class SensorTableViewController: UITableViewController {
 
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let indexPath = tableView.indexPathForSelectedRow(),
-            let dv = segue.destinationViewController as? SensorViewController {
+        
+        if let indexPath = tableView.indexPathForSelectedRow() {
+            let dv = (segue.destinationViewController as! UINavigationController).childViewControllers[0] as! SensorViewController
             dv.sensor = sensors[indexPath.row]
         }
     }
