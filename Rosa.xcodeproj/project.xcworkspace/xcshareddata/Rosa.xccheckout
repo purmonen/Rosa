@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6AE3D35F-B2E7-4889-A653-8E3BDB7CE6EA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Rosa</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F77CC56331C2016EAC41DA72114C382DCCC3AEC6</key>
+		<string>https://github.com/purmonen/Rosa.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Rosa.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F77CC56331C2016EAC41DA72114C382DCCC3AEC6</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/purmonen/Rosa.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F77CC56331C2016EAC41DA72114C382DCCC3AEC6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F77CC56331C2016EAC41DA72114C382DCCC3AEC6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Rosa</string>
+		</dict>
+	</array>
+</dict>
+</plist>

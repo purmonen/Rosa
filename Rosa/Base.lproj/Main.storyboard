@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MSu-jN-r3O">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,5 +35,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Sensor View Controller-->
+        <scene sceneID="h8n-zs-J0C">
+            <objects>
+                <viewController id="GaL-9l-H62" customClass="SensorViewController" customModule="Rosa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j3m-Sk-ZcB"/>
+                        <viewControllerLayoutGuide type="bottom" id="haC-yu-UWS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MyS-w8-bc7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNO-yO-4YU">
+                                <rect key="frame" x="16" y="74" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QNO-yO-4YU" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="10" id="7u0-DQ-Fcu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QNO-yO-4YU" secondAttribute="trailing" id="CwY-4Y-zCJ"/>
+                            <constraint firstItem="QNO-yO-4YU" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" id="ltT-gt-BDw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="QNO-yO-4YU" id="TK9-hH-5gR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50I-d4-W19" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="2136"/>
+        </scene>
+        <!--Sensors-->
+        <scene sceneID="cp8-Ke-XML">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="QRV-JG-lim" customClass="SensorTableViewController" customModule="Rosa" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="t3Z-a6-lvI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SensorTableViewCell" id="eSU-VZ-KPw">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSU-VZ-KPw" id="D4V-cG-t0v">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="GaL-9l-H62" kind="show" id="Lpx-Jp-dzc"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pk4-PR-0zD">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pk4-PR-0zD" id="mtz-bp-N5q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="U3r-SV-iBq">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U3r-SV-iBq" id="18a-Ol-Buf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="QRV-JG-lim" id="Hd1-Vy-R98"/>
+                            <outlet property="delegate" destination="QRV-JG-lim" id="Pap-AG-dwf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sensors" id="rKn-4w-yPD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdI-m9-pAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="1930"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P3L-yP-W07">
+            <objects>
+                <navigationController id="PJ8-3k-9vt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DqE-4k-iBz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QRV-JG-lim" kind="relationship" relationship="rootViewController" id="3Hd-EO-2JV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDy-TC-lms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="1386"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Udr-jQ-kVZ">
+            <objects>
+                <splitViewController id="MSu-jN-r3O" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="PJ8-3k-9vt" kind="relationship" relationship="masterViewController" id="4aR-Sg-22I"/>
+                        <segue destination="GaL-9l-H62" kind="relationship" relationship="detailViewController" id="Llu-ag-Si6"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCb-ie-7Tz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-472" y="1716"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Lpx-Jp-dzc"/>
+    </inferredMetricsTieBreakers>
 </document>
