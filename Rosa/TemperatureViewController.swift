@@ -9,13 +9,15 @@
 import UIKit
 
 class TemperatureViewController: UIViewController, SensorManagerDelegate {
-
+    
     func sensorManagerDidSync() {
         NSOperationQueue().addOperationWithBlock {
-            let temperatures = databaseConnector().getAllTemperaturesForIp(selectedSensor!.name)
-            NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.temperatureView.temperatures = temperatures
-                self.temperatureView.setNeedsDisplay()
+            if let name = selectedSensor?.name {
+                let temperatures = databaseConnector().getAllTemperaturesForIp(name)
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    self.temperatureView.temperatures = temperatures
+                    self.temperatureView.setNeedsDisplay()
+                }
             }
         }
     }
@@ -37,11 +39,11 @@ class TemperatureViewController: UIViewController, SensorManagerDelegate {
         sensorManagerDidSync()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }

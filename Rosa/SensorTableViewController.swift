@@ -25,7 +25,7 @@ class SensorTableViewController: UITableViewController, SensorManagerDelegate {
     func sensorManagerDidSync() {
         NSOperationQueue.mainQueue().addOperationWithBlock {
             self.sensors = SensorManager.sensors
-            println("Timestamp \(self.sensors[0].timestamp))")
+//            println("Timestamp \(self.sensors[0].timestamp))")
             self.tableView.reloadData()
         }
     }
