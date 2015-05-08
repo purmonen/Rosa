@@ -14,7 +14,9 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let sensor = selectedSensor {
+            cameraImage.image = sensor.image
+        }
         // Do any additional setup after loading the view.
     }
 

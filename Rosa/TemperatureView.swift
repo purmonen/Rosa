@@ -1,9 +1,16 @@
 import UIKit
 
 class TemperatureView: UIView {
-    let temperatures = (0..<30).map { _ in 10 + Int(rand()) % 20 }
+//    let temperatures = (0..<30).map { _ in 10 + Int(rand()) % 20 }
+    var temperatures = databaseConnector().getAllTemperaturesForIp(selectedSensor!.name)//allSensors.filter({$0.name == selectedSensor!.name}).map({$0.temperature})
+    
+    
+
     
     override func drawRect(rect: CGRect) {
+        if let sensor = selectedSensor{
+            databaseConnector().getAllTemperaturesForIp(sensor.name)
+        }
         let context = UIGraphicsGetCurrentContext()
         CGContextSetLineWidth(context, 2.0)
         CGContextSetStrokeColorWithColor(context, UIColor.lightGrayColor().CGColor)
@@ -26,6 +33,4 @@ class TemperatureView: UIView {
         }
         CGContextStrokePath(context)
     }
-    
-
 }

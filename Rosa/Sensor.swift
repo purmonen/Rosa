@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Sami Purmonen. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Sensor {
     let name:String
     let temperature:Double
     let isConnected:Bool
-    let imageData:NSData
+    let image: UIImage
+    let timestamp: NSDate
 }
-

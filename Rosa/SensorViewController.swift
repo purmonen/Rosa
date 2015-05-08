@@ -16,26 +16,12 @@ class SensorViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var containerViewControllers = [UIViewController]()
     
-    var _sensor: Sensor?
-    var sensor: Sensor? {
-        set {
-            _sensor = newValue
-
-            if let sensor = sensor{
-                if cameraImageView != nil {
-                    cameraImageView.image = UIImage(data: sensor.imageData)
-                }
-            }
-        }
-        get {
-            return _sensor
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         containerViewControllers = ["CameraViewController" ,"TemperatureViewController"].map { self.storyboard!.instantiateViewControllerWithIdentifier($0) as! UIViewController }
         changedView(segmentedControl)
+        
+
     }
     
     
@@ -47,18 +33,10 @@ class SensorViewController: UIViewController {
         controller.view.frame = containerView.bounds
         
     }
-    
-
-    @IBOutlet weak var cameraImageView: UIImageView!
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    override func viewDidAppear(animated: Bool) {
-        if let sensor = sensor{
-            cameraImageView.image = UIImage(data: sensor.imageData)
-        }
     }
 }
