@@ -11,7 +11,9 @@ import UIKit
 struct Sensor {
     let name:String
     let temperature:Double
-    let isConnected:Bool
+    var isConnected:Bool{
+        return timestamp.timeIntervalSinceNow > -20
+    }
     let image: UIImage
     let timestamp: NSDate
 }

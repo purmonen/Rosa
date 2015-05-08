@@ -52,7 +52,7 @@ class _SensorManager: NSObject {
                             timestamp = tmp["timestamp"] as? String,
                             date = dateformatter.dateFromString(timestamp.stringByReplacingOccurrencesOfString(" UTC", withString: "", options: nil, range: nil)) {
 //                                sensors.append(Sensor(name: ip, temperature: Double(Int(rand()) % 30), isConnected: true, image: UIImage(data: imageData)!,timestamp: NSDate()))
-                                sensors.append(Sensor(name: ip, temperature: temperature, isConnected: true, image: UIImage(data: imageData)!,timestamp: date))
+                                sensors.append(Sensor(name: ip, temperature: temperature, image: UIImage(data: imageData)!,timestamp: date))
                         }
                     }
                 }
