@@ -35,7 +35,7 @@ class CameraViewController: UIViewController, SensorManagerDelegate {
     }
     
     func sensorManagerDidSync() {
-        if let image = SensorManager.sensors.filter({ $0.name == selectedSensor!.name }).first?.image {
+        if let image = SensorManager.sensors.filter({ $0.name == selectedSensor?.name ?? "" }).first?.image {
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 self.cameraImage.image = image
             }

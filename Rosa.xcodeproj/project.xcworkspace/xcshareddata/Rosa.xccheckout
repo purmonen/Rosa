@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>EE4E206A-608F-490E-B550-DB843BFA88D0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Rosa</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F77CC56331C2016EAC41DA72114C382DCCC3AEC6</key>
 		<string>https://github.com/purmonen/Rosa.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Rosa.xcodeproj/project.xcworkspace</string>
+	<string>Rosa.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F77CC56331C2016EAC41DA72114C382DCCC3AEC6</key>
