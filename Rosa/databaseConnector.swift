@@ -46,7 +46,7 @@ class databaseConnector{
         var out = [AnyObject]();
         if let ips = (result as? [String:AnyObject])?["values"] as? [String]{
             for ip in ips {
-                var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&fo=true"
+                var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&s={\"timestamp\":-1}&l=1"
                 theurl = theurl?.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
                 let request = NSMutableURLRequest(URL: NSURL(string: theurl!)!)
                 var response:NSURLResponse? = NSURLResponse()
@@ -54,7 +54,7 @@ class databaseConnector{
 
                 var result =  NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
                 //println(result)
-                out.append(result!)
+                out.append(result![0])
                 
             }
         }

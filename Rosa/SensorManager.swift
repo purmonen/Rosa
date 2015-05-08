@@ -20,7 +20,7 @@ class _SensorManager: NSObject {
     
     override init() {
         super.init()
-        timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "updateSensors", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateSensors", userInfo: nil, repeats: true)
         timer?.fire()
     }
     
@@ -51,7 +51,8 @@ class _SensorManager: NSObject {
                             imageData = NSData(base64EncodedString: image, options: nil),
                             timestamp = tmp["timestamp"] as? String,
                             date = dateformatter.dateFromString(timestamp.stringByReplacingOccurrencesOfString(" UTC", withString: "", options: nil, range: nil)) {
-                                sensors.append(Sensor(name: ip, temperature: Double(Int(rand()) % 30), isConnected: true, image: UIImage(data: imageData)!,timestamp: NSDate()))
+//                                sensors.append(Sensor(name: ip, temperature: Double(Int(rand()) % 30), isConnected: true, image: UIImage(data: imageData)!,timestamp: NSDate()))
+                                sensors.append(Sensor(name: ip, temperature: temperature, isConnected: true, image: UIImage(data: imageData)!,timestamp: date))
                         }
                     }
                 }
