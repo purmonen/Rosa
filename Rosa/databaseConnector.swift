@@ -57,7 +57,7 @@ class databaseConnector{
     }
     
     func getAllTemperaturesForIp(ip:String)->[Double]{
-        if let theurl = (url+"&q={\"ip\":\"\(ip)\"}&f={\"temp\":1, \"timestamp\":1}").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
+        if let theurl = (url+"&q={\"ip\":\"\(ip)\"}&f={\"temp\":1, \"timestamp\":1}&l=20").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
             let request = NSURLRequest(URL: NSURL(string: theurl)!)
             var response:NSURLResponse? = nil
             if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil) {
