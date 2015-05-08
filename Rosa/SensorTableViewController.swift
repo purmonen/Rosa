@@ -55,8 +55,8 @@ class SensorTableViewController: UITableViewController, SensorManagerDelegate {
         
         cell.nameLabel?.text = sensors[indexPath.row].name
         cell.connectedLabel.textColor = sensor.isConnected ? UIColor.greenColor() : UIColor.redColor()
-        let zebra = "-"
-        cell.temperatureLabel.text = sensor.isConnected ? "\(sensor.temperature) °C" : ""
+        var zebra = String(format: "%.1f °C", arguments: [sensor.temperature])
+        cell.temperatureLabel.text = sensor.isConnected ? zebra : ""
         return cell
     }
     

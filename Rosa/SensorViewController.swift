@@ -27,6 +27,13 @@ class SensorViewController: UIViewController {
             self.navigationItem.title = "Sensor"
         }
     }
+    @IBAction func startLiveVieoButtonClicked(sender: AnyObject) {
+        if let sensor = selectedSensor{
+            var urlString = "rtsp://\(sensor.name):8554/"
+            var url=NSURL(string: urlString)!;
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
     
     @IBAction func changedView(sender: UISegmentedControl) {
         let controller = containerViewControllers[sender.selectedSegmentIndex]
