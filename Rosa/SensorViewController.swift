@@ -20,6 +20,13 @@ class SensorViewController: UIViewController {
         containerViewControllers = ["CameraViewController" ,"TemperatureViewController"].map { self.storyboard!.instantiateViewControllerWithIdentifier($0) as! UIViewController }
         changedView(segmentedControl)
     }
+    override func viewDidAppear(animated: Bool) {
+        if let sensor = selectedSensor{
+            self.navigationItem.title = sensor.name
+        }else{
+            self.navigationItem.title = "Sensor"
+        }
+    }
     
     @IBAction func changedView(sender: UISegmentedControl) {
         let controller = containerViewControllers[sender.selectedSegmentIndex]
