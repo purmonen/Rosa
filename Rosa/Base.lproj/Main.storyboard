@@ -140,7 +140,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N93-t1-bHo">
-                                            <rect key="frame" x="564" y="8" width="18" height="27"/>
+                                            <rect key="frame" x="574" y="8" width="18" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="nEb-Yk-3Yr" firstAttribute="centerY" secondItem="HUH-jH-ejq" secondAttribute="centerY" id="3oP-jv-hiG"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="N93-t1-bHo" secondAttribute="trailing" constant="10" id="FQA-Nc-5Ii"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="N93-t1-bHo" secondAttribute="trailing" id="FQA-Nc-5Ii"/>
                                         <constraint firstItem="nEb-Yk-3Yr" firstAttribute="leading" secondItem="D4V-cG-t0v" secondAttribute="leadingMargin" constant="10" id="Hdv-xz-qBf"/>
                                         <constraint firstItem="N93-t1-bHo" firstAttribute="leading" secondItem="HUH-jH-ejq" secondAttribute="trailing" constant="10" id="XGh-hg-G7Y"/>
                                         <constraint firstItem="N93-t1-bHo" firstAttribute="top" secondItem="D4V-cG-t0v" secondAttribute="topMargin" id="ZaJ-yB-mmv"/>
