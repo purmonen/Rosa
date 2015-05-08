@@ -12,7 +12,6 @@
 		2637CCD81AFC06F000866422 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637CCD71AFC06F000866422 /* TemperatureView.swift */; };
 		26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */; };
 		26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E311AFBADB300E24BC5 /* AppDelegate.swift */; };
-		26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E331AFBADB300E24BC5 /* ViewController.swift */; };
 		26B97E371AFBADB300E24BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E351AFBADB300E24BC5 /* Main.storyboard */; };
 		26B97E391AFBADB300E24BC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E381AFBADB300E24BC5 /* Images.xcassets */; };
 		26B97E3C1AFBADB400E24BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */; };
@@ -42,7 +41,6 @@
 		26B97E2C1AFBADB300E24BC5 /* Rosa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rosa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B97E301AFBADB300E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B97E311AFBADB300E24BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26B97E331AFBADB300E24BC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		26B97E361AFBADB300E24BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26B97E381AFBADB300E24BC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26B97E3B1AFBADB400E24BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				26B97E311AFBADB300E24BC5 /* AppDelegate.swift */,
-				26B97E331AFBADB300E24BC5 /* ViewController.swift */,
 				2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */,
 				2612E4E81AFBB1C70064B687 /* SensorViewController.swift */,
 				2637CCD71AFC06F000866422 /* TemperatureView.swift */,
@@ -243,7 +240,6 @@
 				DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */,
 				DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */,
 				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
-				26B97E341AFBADB300E24BC5 /* ViewController.swift in Sources */,
 				26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */,
 				2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */,
 				2637CCD81AFC06F000866422 /* TemperatureView.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SensorManagerDelegate {
+protocol SensorManagerDelegate: class {
     func sensorManagerDidSync()
 }
 
@@ -21,9 +21,20 @@ class _SensorManager: NSObject {
     override init() {
         super.init()
         timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "updateSensors", userInfo: nil, repeats: true)
+        timer?.fire()
     }
     
-    var delegate: SensorManagerDelegate?
+    var delegates = [SensorManagerDelegate]()
+    
+    func addDelegate(delegate: SensorManagerDelegate) {
+        if delegates.filter({ $0 === delegate }).isEmpty {
+            delegates.append(delegate)
+        }
+    }
+    
+    func removeDelegate(delegate: SensorManagerDelegate) {
+        delegates = delegates.filter { $0 !== delegate }
+    }
     
     func updateSensors() {
         NSOperationQueue().addOperationWithBlock {
@@ -45,7 +56,8 @@ class _SensorManager: NSObject {
                     }
                 }
                 self.sensors = sensors
-                self.delegate?.sensorManagerDidSync()
+                self.delegates.map { $0.sensorManagerDidSync() }
+                println("Delegates count: \(self.delegates.count)")
             }
         }
     }

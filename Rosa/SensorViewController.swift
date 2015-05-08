@@ -12,7 +12,6 @@ class SensorViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
-    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var containerViewControllers = [UIViewController]()
     
@@ -20,10 +19,7 @@ class SensorViewController: UIViewController {
         super.viewDidLoad()
         containerViewControllers = ["CameraViewController" ,"TemperatureViewController"].map { self.storyboard!.instantiateViewControllerWithIdentifier($0) as! UIViewController }
         changedView(segmentedControl)
-        
-
     }
-    
     
     @IBAction func changedView(sender: UISegmentedControl) {
         let controller = containerViewControllers[sender.selectedSegmentIndex]
@@ -31,7 +27,7 @@ class SensorViewController: UIViewController {
         containerView.addSubview(controller.view)
         controller.didMoveToParentViewController(self)
         controller.view.frame = containerView.bounds
-        
+        controller.viewDidAppear(false)
     }
 
 

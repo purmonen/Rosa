@@ -46,9 +46,7 @@ class databaseConnector{
         var out = [AnyObject]();
         if let ips = (result as? [String:AnyObject])?["values"] as? [String]{
             for ip in ips {
-
                 var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&fo=true"
-                println(theurl!)
                 theurl = theurl?.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
                 let request = NSMutableURLRequest(URL: NSURL(string: theurl!)!)
                 var response:NSURLResponse? = NSURLResponse()
@@ -64,7 +62,6 @@ class databaseConnector{
     }
     func getAllTemperaturesForIp(ip:String)->[Double]{
         var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&f={\"temp\":1, \"timestamp\":1}"
-        println(theurl)
         theurl = theurl?.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
 println(theurl)
         let request = NSURLRequest(URL: NSURL(string: theurl!)!)
@@ -74,7 +71,6 @@ println(theurl)
         if (data == nil){
             return []
         }
-        println(NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil))
         //return NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
         if let var json = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as? [[String:AnyObject]] {
             return json.map({$0["temp"]! as! Double})

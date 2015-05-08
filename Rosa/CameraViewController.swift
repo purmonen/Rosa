@@ -8,16 +8,25 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, SensorManagerDelegate {
     
     @IBOutlet weak var cameraImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let sensor = selectedSensor {
-            cameraImage.image = sensor.image
-        }
+
+        sensorManagerDidSync()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        SensorManager.addDelegate(self)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        SensorManager.removeDelegate(self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +34,14 @@ class CameraViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func sensorManagerDidSync() {
+        if let image = SensorManager.sensors.filter({ $0.name == selectedSensor!.name }).first?.image {
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+                self.cameraImage.image = image
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
