@@ -4,9 +4,6 @@ class TemperatureView: UIView {
 //    let temperatures = (0..<30).map { _ in 10 + Int(rand()) % 20 }
     var temperatures = databaseConnector().getAllTemperaturesForIp(selectedSensor!.name)//allSensors.filter({$0.name == selectedSensor!.name}).map({$0.temperature})
     
-    
-
-    
     override func drawRect(rect: CGRect) {
         if let sensor = selectedSensor{
             databaseConnector().getAllTemperaturesForIp(sensor.name)
