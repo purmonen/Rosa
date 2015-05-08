@@ -9,43 +9,24 @@
 import UIKit
 
 var selectedSensor: Sensor?
-var allSensors :[Sensor] = []
 
-class SensorTableViewController: UITableViewController {
+
+
+class SensorTableViewController: UITableViewController, SensorManagerDelegate {
     
-    var uniqueSensors :[Sensor] = []
+    var sensors = [Sensor]()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //NSOperationQueue().addOperationWithBlock { () -> Void in
-        if let  data = databaseConnector().getAllSensors() as? NSArray{
-            for tmp in data{
-                if let tmp = tmp as? [String:AnyObject]{
-                    var dateformatter = NSDateFormatter()
-                    dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                    
-                    if let ip = tmp["ip"] as? String,
-                        temperature = tmp["temp"] as? Double,
-                        image = tmp["image"] as? String,
-                        imageData = NSData(base64EncodedString: image, options: nil),
-                        timestamp = tmp["timestamp"] as? String,
-                        date = dateformatter.dateFromString(timestamp.stringByReplacingOccurrencesOfString(" UTC", withString: "", options: nil, range: nil)) {
-                            
-                            
-                            //if !contains(uniqueSensors.map { $0.name }, ip) {
-                                uniqueSensors.append(Sensor(name: ip, temperature: temperature, isConnected: true, image: UIImage(data: imageData)!,timestamp: NSDate()))
-                            //}
-                            allSensors.append(Sensor(name: ip, temperature: temperature, isConnected: true, image: UIImage(data: imageData)!,timestamp: NSDate()))
-                    }
-                }
-            }
+        SensorManager.delegate = self
+    }
+    
+    func sensorManagerDidSync() {
+        NSOperationQueue.mainQueue().addOperationWithBlock {
+            self.sensors = SensorManager.sensors
+            self.tableView.reloadData()
         }
-        //}
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,15 +45,15 @@ class SensorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return uniqueSensors.count
+        return sensors.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let sensor = uniqueSensors[indexPath.row]
+        let sensor = sensors[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("SensorTableViewCell", forIndexPath: indexPath) as! SensorTableViewCell
         
-        cell.nameLabel?.text = uniqueSensors[indexPath.row].name
+        cell.nameLabel?.text = sensors[indexPath.row].name
         cell.connectedLabel.textColor = sensor.isConnected ? UIColor.greenColor() : UIColor.redColor()
         let zebra = "-"
         cell.temperatureLabel.text = sensor.isConnected ? "\(sensor.temperature) °C" : ""
@@ -119,7 +100,7 @@ class SensorTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let indexPath = tableView.indexPathForSelectedRow() {
-            selectedSensor = uniqueSensors[indexPath.row]
+            selectedSensor = sensors[indexPath.row]
         }
     }
     
