@@ -53,7 +53,6 @@ class databaseConnector{
                 var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
 
                 var result =  NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
-                //println(result)
                 out.append(result![0])
                 
             }
@@ -63,7 +62,6 @@ class databaseConnector{
     func getAllTemperaturesForIp(ip:String)->[Double]{
         var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&f={\"temp\":1, \"timestamp\":1}"
         theurl = theurl?.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-println(theurl)
         let request = NSURLRequest(URL: NSURL(string: theurl!)!)
         var response:NSURLResponse? = NSURLResponse()
         var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
