@@ -18,63 +18,44 @@ class databaseConnector{
         return "https://api.mongolab.com/api/1/databases/\(database)/runCommand?apiKey=VEtCU0LBaYtnDP51KNliwetFRtjywjNl"
     }
     
-    func getAllReadings()->AnyObject?{
-        let request = NSURLRequest(URL: NSURL(string: url)!)
-        var response:NSURLResponse? = NSURLResponse()
-        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
-        
-        if (data == nil){
-            return nil
-        }
-//        NSLog(NSString(data: data!, encoding: NSUTF8StringEncoding) as! String)
-        return NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
-    }
-    func getAllSensors()->AnyObject?{
-
+    func getAllSensors()->[AnyObject] {
         let request = NSMutableURLRequest(URL: NSURL(string: url2)!)
         request.HTTPMethod = "POST"
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(["distinct":collection, "key":"ip", "query": [:]], options: nil, error: nil);
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(["distinct":collection, "key":"ip", "query": [:]], options: nil, error: nil)
         request.setValue("application/json", forHTTPHeaderField: "Content-type")
-        var response:NSURLResponse? = NSURLResponse()
-        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
-        
-        if (data == nil){
-            return nil
-        }
-        //        NSLog(NSString(data: data!, encoding: NSUTF8StringEncoding) as! String)
-        var result :AnyObject? =  NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
+        var response: NSURLResponse? = nil
         var out = [AnyObject]();
-        if let ips = (result as? [String:AnyObject])?["values"] as? [String]{
-            for ip in ips {
-                var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&s={\"timestamp\":-1}&l=1"
-                theurl = theurl?.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-                let request = NSMutableURLRequest(URL: NSURL(string: theurl!)!)
-                var response:NSURLResponse? = NSURLResponse()
-                var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
-
-                var result =  NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
-                out.append(result![0])
-                
-            }
+        if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil),
+            let result: AnyObject =  NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil),
+            let ips = (result as? [String:AnyObject])?["values"] as? [String] {
+                for ip in ips {
+                    if let theurl = (url+"&q={\"ip\":\"\(ip)\"}&s={\"timestamp\":-1}&l=1").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
+                        let request = NSMutableURLRequest(URL: NSURL(string: theurl)!)
+                        var response:NSURLResponse? = nil
+                        if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil),
+                            let result = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [AnyObject] where !result.isEmpty {
+                                out.append(result[0])
+                                
+                        }
+                    }
+                    
+                }
         }
         return out
     }
+    
     func getAllTemperaturesForIp(ip:String)->[Double]{
-        var theurl:String? = url+"&q={\"ip\":\"\(ip)\"}&f={\"temp\":1, \"timestamp\":1}"
-        theurl = theurl?.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-        let request = NSURLRequest(URL: NSURL(string: theurl!)!)
-        var response:NSURLResponse? = NSURLResponse()
-        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
-        
-        if (data == nil){
-            return []
-        }
-        //return NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil)
-        if let var json = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as? [[String:AnyObject]] {
-            return json.map({$0["temp"]! as! Double})
+        if let theurl = (url+"&q={\"ip\":\"\(ip)\"}&f={\"temp\":1, \"timestamp\":1}").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
+            let request = NSURLRequest(URL: NSURL(string: theurl)!)
+            var response:NSURLResponse? = nil
+            if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil) {
+                if let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [[String:AnyObject]] {
+                    return json.map({$0["temp"] as? Double ?? 0.0})
+                }
+            }
         }
         return []
     }
-   
+    
     
 }

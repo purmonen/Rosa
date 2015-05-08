@@ -16,7 +16,6 @@ class SensorTableViewController: UITableViewController, SensorManagerDelegate {
     
     var sensors = [Sensor]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         SensorManager.addDelegate(self)
@@ -62,7 +61,6 @@ class SensorTableViewController: UITableViewController, SensorManagerDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if let indexPath = tableView.indexPathForSelectedRow() {
             selectedSensor = sensors[indexPath.row]
         }
