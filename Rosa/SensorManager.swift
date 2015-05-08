@@ -38,29 +38,9 @@ class _SensorManager: NSObject {
     
     func updateSensors() {
         NSOperationQueue().addOperationWithBlock {
-            var sensors = [Sensor]()
-            if let  data = databaseConnector().getAllSensors() as? NSArray{
-                for tmp in data{
-                    if let tmp = tmp as? [String:AnyObject]{
-                        var dateformatter = NSDateFormatter()
-                        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                        
-                        if let ip = tmp["ip"] as? String,
-                            temperature = tmp["temp"] as? Double,
-                            image = tmp["image"] as? String,
-                            imageData = NSData(base64EncodedString: image, options: nil),
-                            timestamp = tmp["timestamp"] as? String,
-                            date = dateformatter.dateFromString(timestamp.stringByReplacingOccurrencesOfString(" UTC", withString: "", options: nil, range: nil)) {
-//                                sensors.append(Sensor(name: ip, temperature: Double(Int(rand()) % 30), isConnected: true, image: UIImage(data: imageData)!,timestamp: NSDate()))
-                                sensors.append(Sensor(name: ip, temperature: temperature, image: UIImage(data: imageData)!,timestamp: date))
-                        }
-                    }
-                }
-                self.sensors = sensors
+                self.sensors = databaseConnector().getAllSensors()
                 self.delegates.map { $0.sensorManagerDidSync() }
                 println("Delegates count: \(self.delegates.count)")
-            }
         }
     }
-    
 }

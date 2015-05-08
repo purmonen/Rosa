@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Sami Purmonen. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class databaseConnector{
     let database = "teamrosa"
@@ -18,13 +18,13 @@ class databaseConnector{
         return "https://api.mongolab.com/api/1/databases/\(database)/runCommand?apiKey=VEtCU0LBaYtnDP51KNliwetFRtjywjNl"
     }
     
-    func getAllSensors()->[AnyObject] {
+    func getAllSensors()->[Sensor] {
         let request = NSMutableURLRequest(URL: NSURL(string: url2)!)
         request.HTTPMethod = "POST"
         request.HTTPBody = NSJSONSerialization.dataWithJSONObject(["distinct":collection, "key":"ip", "query": [:]], options: nil, error: nil)
         request.setValue("application/json", forHTTPHeaderField: "Content-type")
         var response: NSURLResponse? = nil
-        var out = [AnyObject]();
+        var out = [Sensor]();
         if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil),
             let result: AnyObject =  NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil),
             let ips = (result as? [String:AnyObject])?["values"] as? [String] {
@@ -34,8 +34,20 @@ class databaseConnector{
                         var response:NSURLResponse? = nil
                         if let data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil),
                             let result = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? [AnyObject] where !result.isEmpty {
-                                out.append(result[0])
                                 
+                                
+                                var dateformatter = NSDateFormatter()
+                                dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                                
+                                let tmp = result[0]
+                                if let ip = tmp["ip"] as? String,
+                                    temperature = tmp["temp"] as? Double,
+                                    image = tmp["image"] as? String,
+                                    imageData = NSData(base64EncodedString: image, options: nil),
+                                    timestamp = tmp["timestamp"] as? String,
+                                    date = dateformatter.dateFromString(timestamp.stringByReplacingOccurrencesOfString(" UTC", withString: "", options: nil, range: nil)) {
+                                        out.append(Sensor(name: ip, temperature: temperature, image: UIImage(data: imageData)!,timestamp: date))
+                                }
                         }
                     }
                     
