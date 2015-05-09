@@ -20,13 +20,22 @@ class TemperatureView: UIView {
         CGContextStrokePath(context)
         
         
+        for i in 1..<5{
+            CGContextMoveToPoint(context, 0, 0)
+            CGContextAddLineToPoint(context, 0, bounds.height*CGFloat(i)/5.0)
+            CGContextAddLineToPoint(context, bounds.width/50, bounds.height*CGFloat(i)/5.0)
+            CGContextStrokePath(context)
+            
+            
+        }
+        
         // Draw temperatures
         CGContextSetStrokeColorWithColor(context, UIColor.blueColor().CGColor)
         for (i, temperature) in enumerate(temperatures) {
             if i == 0 {
-                CGContextMoveToPoint(context, 0, CGFloat(bounds.height) - CGFloat(temperature))
+                CGContextMoveToPoint(context, 0, (100 - CGFloat(temperature))/100*CGFloat(bounds.height))
             } else {
-                CGContextAddLineToPoint(context, CGFloat(i*Int(bounds.width)/(temperatures.count-1)), CGFloat(bounds.height) - CGFloat(temperature))
+                CGContextAddLineToPoint(context, CGFloat(i*Int(bounds.width)/(temperatures.count-1)), (100 - CGFloat(temperature))/100*CGFloat(bounds.height))
             }
         }
         CGContextStrokePath(context)

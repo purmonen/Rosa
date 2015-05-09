@@ -34,6 +34,15 @@
                                     <segue destination="GtX-DH-9og" kind="embed" id="iBN-SL-ary"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emC-DX-Gah">
+                                <rect key="frame" x="398" y="72" width="39" height="30"/>
+                                <state key="normal" title="Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startLiveVieoButtonClicked:" destination="GaL-9l-H62" eventType="touchUpInside" id="QEp-cB-0hC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -41,9 +50,18 @@
                             <constraint firstAttribute="centerX" secondItem="kLa-Oy-Grw" secondAttribute="centerX" id="C4P-bo-96A"/>
                             <constraint firstItem="MVi-po-llI" firstAttribute="top" secondItem="kLa-Oy-Grw" secondAttribute="bottom" constant="10" id="DnQ-6e-Ldq"/>
                             <constraint firstItem="MVi-po-llI" firstAttribute="leading" secondItem="MyS-w8-bc7" secondAttribute="leadingMargin" id="FFK-Wl-nKd"/>
+                            <constraint firstItem="MVi-po-llI" firstAttribute="top" secondItem="emC-DX-Gah" secondAttribute="bottom" constant="10" id="McZ-fX-L6V"/>
+                            <constraint firstItem="emC-DX-Gah" firstAttribute="trailing" secondItem="MVi-po-llI" secondAttribute="trailing" id="NRr-gT-7MW"/>
                             <constraint firstItem="kLa-Oy-Grw" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="10" id="Tdn-o5-tJf"/>
+                            <constraint firstItem="emC-DX-Gah" firstAttribute="top" secondItem="j3m-Sk-ZcB" secondAttribute="bottom" constant="8" id="rTF-uU-tQP"/>
                             <constraint firstItem="haC-yu-UWS" firstAttribute="top" secondItem="MVi-po-llI" secondAttribute="bottom" constant="10" id="uS8-eI-sY7"/>
+                            <constraint firstItem="emC-DX-Gah" firstAttribute="leading" secondItem="kLa-Oy-Grw" secondAttribute="trailing" constant="8" id="uVW-Yd-kvI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uVW-Yd-kvI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Sensor" id="yad-Ep-eJL"/>
                     <connections>

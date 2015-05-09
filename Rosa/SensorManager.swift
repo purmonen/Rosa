@@ -20,7 +20,7 @@ class _SensorManager: NSObject {
     
     override init() {
         super.init()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateSensors", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "updateSensors", userInfo: nil, repeats: true)
         timer?.fire()
     }
     
