@@ -8,6 +8,22 @@
 
 import UIKit
 
+let grassyKnollGreen = 0x2DBB28
+let piningGreen = 0x387A36
+let oakUnderCloudGreen = 0x235021
+let deepWoodGreen = 0x1E311D
+let bajenGreen = 0x01663e
+let darkBajenGreen = 0x00784A
+let lightBajenGreen = 0x0B7C50
+extension UIColor {
+    convenience init(hex: Int) {
+        let red = CGFloat((hex >> 16) & 0xff) / 255.0
+        let green = CGFloat((hex >> 8) & 0xff) / 255.0
+        let blue = CGFloat(hex & 0xff) / 255.0
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
@@ -17,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         (window?.rootViewController as? UISplitViewController)?.delegate = self
+        UINavigationBar.appearance().barTintColor = UIColor(hex: lightBajenGreen)
+        UISegmentedControl.appearance().tintColor = UIColor(hex: lightBajenGreen)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
         // Override point for customization after application launch.
         return true
     }

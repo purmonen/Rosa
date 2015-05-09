@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */; };
 		2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612E4E81AFBB1C70064B687 /* SensorViewController.swift */; };
+		262465E31AFD810C0047B5EE /* SensorTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262465E21AFD810C0047B5EE /* SensorTableViewCell2.swift */; };
 		2637CCD81AFC06F000866422 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637CCD71AFC06F000866422 /* TemperatureView.swift */; };
 		26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */; };
 		26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E311AFBADB300E24BC5 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
 		2612E4E81AFBB1C70064B687 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
+		262465E21AFD810C0047B5EE /* SensorTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell2.swift; sourceTree = "<group>"; };
 		2637CCD71AFC06F000866422 /* TemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorManager.swift; sourceTree = "<group>"; };
 		26B97E2C1AFBADB300E24BC5 /* Rosa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rosa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				2637CCD71AFC06F000866422 /* TemperatureView.swift */,
 				DAFBAFDE1AFC1F3F0035FEDC /* CameraViewController.swift */,
 				26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */,
+				262465E21AFD810C0047B5EE /* SensorTableViewCell2.swift */,
 				DAFBAFE01AFC1F4B0035FEDC /* TemperatureViewController.swift */,
 				26B97E351AFBADB300E24BC5 /* Main.storyboard */,
 				26B97E381AFBADB300E24BC5 /* Images.xcassets */,
@@ -239,6 +242,7 @@
 				2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */,
 				DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */,
 				DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */,
+				262465E31AFD810C0047B5EE /* SensorTableViewCell2.swift in Sources */,
 				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
 				26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */,
 				2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */,

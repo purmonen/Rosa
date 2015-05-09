@@ -16,4 +16,8 @@ struct Sensor {
     }
     let image: UIImage
     let timestamp: NSDate
+    
+    var description: String {
+        return ["Machine room", "Living room", "Backyard", "Forest", "School", "Battlefield"][Int(timestamp.timeIntervalSince1970) % 6]
+    }
 }

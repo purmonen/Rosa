@@ -51,12 +51,18 @@ class SensorTableViewController: UITableViewController, SensorManagerDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let sensor = sensors[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("SensorTableViewCell", forIndexPath: indexPath) as! SensorTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("SensorTableViewCell2", forIndexPath: indexPath) as! SensorTableViewCell2
         
         cell.nameLabel?.text = sensors[indexPath.row].name
         cell.connectedLabel.textColor = sensor.isConnected ? UIColor.greenColor() : UIColor.redColor()
         let zebra = "-"
-        cell.temperatureLabel.text = sensor.isConnected ? "\(sensor.temperature) °C" : ""
+        
+        
+        cell.temperatureLabel.text = sensor.isConnected ? String(format: "%.1f °C", arguments: [sensor.temperature]) : ""
+        
+        cell.descriptionLabel.text = sensor.description
+        
+        cell.cameraImageView.image = sensor.image
         return cell
     }
     

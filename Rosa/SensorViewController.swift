@@ -22,7 +22,7 @@ class SensorViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         if let sensor = selectedSensor{
-            self.navigationItem.title = sensor.name
+            self.navigationItem.title = sensor.description
         }else{
             self.navigationItem.title = "Sensor"
         }
