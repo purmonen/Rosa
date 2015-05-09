@@ -40,7 +40,6 @@ class _SensorManager: NSObject {
         NSOperationQueue().addOperationWithBlock {
                 self.sensors = DatabaseConnector().getAllSensors()
                 self.delegates.map { $0.sensorManagerDidSync() }
-                println("Delegates count: \(self.delegates.count)")
         }
     }
     
