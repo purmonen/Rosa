@@ -7,7 +7,7 @@ class TemperatureView: UIView {
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         if let sensor = selectedSensor{
-            databaseConnector().getAllTemperaturesForIp(sensor.name)
+            DatabaseConnector().getAllTemperaturesForIp(sensor.name)
         }
         let context = UIGraphicsGetCurrentContext()
         CGContextSetLineWidth(context, 2.0)

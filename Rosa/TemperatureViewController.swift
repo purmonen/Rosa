@@ -13,7 +13,7 @@ class TemperatureViewController: UIViewController, SensorManagerDelegate {
     func sensorManagerDidSync() {
         NSOperationQueue().addOperationWithBlock {
             if let name = selectedSensor?.name {
-                let temperatures = databaseConnector().getAllTemperaturesForIp(name)
+                let temperatures = DatabaseConnector().getAllTemperaturesForIp(name)
                 NSOperationQueue.mainQueue().addOperationWithBlock {
                     self.temperatureView.temperatures = temperatures
                     self.temperatureView.setNeedsDisplay()

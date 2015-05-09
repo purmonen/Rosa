@@ -18,7 +18,7 @@
 		26B97E3C1AFBADB400E24BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */; };
 		26B97E481AFBADB400E24BC5 /* RosaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E471AFBADB400E24BC5 /* RosaTests.swift */; };
 		DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB11AFBF8930059A3AB /* Sensor.swift */; };
-		DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB51AFC084B0059A3AB /* databaseConnector.swift */; };
+		DA159BB61AFC084B0059A3AB /* DatabaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB51AFC084B0059A3AB /* DatabaseConnector.swift */; };
 		DAFBAFDF1AFC1F3F0035FEDC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBAFDE1AFC1F3F0035FEDC /* CameraViewController.swift */; };
 		DAFBAFE11AFC1F4B0035FEDC /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBAFE01AFC1F4B0035FEDC /* TemperatureViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,7 @@
 		26B97E461AFBADB400E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B97E471AFBADB400E24BC5 /* RosaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaTests.swift; sourceTree = "<group>"; };
 		DA159BB11AFBF8930059A3AB /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
-		DA159BB51AFC084B0059A3AB /* databaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = databaseConnector.swift; sourceTree = "<group>"; };
+		DA159BB51AFC084B0059A3AB /* DatabaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseConnector.swift; sourceTree = "<group>"; };
 		DAFBAFDE1AFC1F3F0035FEDC /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DAFBAFE01AFC1F4B0035FEDC /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +106,7 @@
 				26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */,
 				26B97E2F1AFBADB300E24BC5 /* Supporting Files */,
 				DA159BB11AFBF8930059A3AB /* Sensor.swift */,
-				DA159BB51AFC084B0059A3AB /* databaseConnector.swift */,
+				DA159BB51AFC084B0059A3AB /* DatabaseConnector.swift */,
 			);
 			path = Rosa;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */,
-				DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */,
+				DA159BB61AFC084B0059A3AB /* DatabaseConnector.swift in Sources */,
 				262465E31AFD810C0047B5EE /* SensorTableViewCell.swift in Sources */,
 				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
 				26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */,
