@@ -1,5 +1,5 @@
 # Rosa
-iOS-app for displaying sensor data (camera / temperature) collected from a cluster of Raspberry Pis
+iOS-app for displaying sensor data (camera / temperature) collected from a cluster of Raspberry Pis. Created during the Raspberry Pi challenge at Ericsson E-Hack 2015.
 
 
 
