@@ -8,7 +8,7 @@
 
 import UIKit
 
-class databaseConnector{
+class databaseConnector {
     let database = "teamrosa"
     let collection = "readings"
     var url: String {

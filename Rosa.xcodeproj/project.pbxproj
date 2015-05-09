@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */; };
 		2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2612E4E81AFBB1C70064B687 /* SensorViewController.swift */; };
-		262465E31AFD810C0047B5EE /* SensorTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262465E21AFD810C0047B5EE /* SensorTableViewCell2.swift */; };
+		262465E31AFD810C0047B5EE /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262465E21AFD810C0047B5EE /* SensorTableViewCell.swift */; };
 		2637CCD81AFC06F000866422 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637CCD71AFC06F000866422 /* TemperatureView.swift */; };
 		26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */; };
 		26B97E321AFBADB300E24BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E311AFBADB300E24BC5 /* AppDelegate.swift */; };
@@ -18,7 +18,6 @@
 		26B97E3C1AFBADB400E24BC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */; };
 		26B97E481AFBADB400E24BC5 /* RosaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B97E471AFBADB400E24BC5 /* RosaTests.swift */; };
 		DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB11AFBF8930059A3AB /* Sensor.swift */; };
-		DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */; };
 		DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA159BB51AFC084B0059A3AB /* databaseConnector.swift */; };
 		DAFBAFDF1AFC1F3F0035FEDC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBAFDE1AFC1F3F0035FEDC /* CameraViewController.swift */; };
 		DAFBAFE11AFC1F4B0035FEDC /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBAFE01AFC1F4B0035FEDC /* TemperatureViewController.swift */; };
@@ -37,7 +36,7 @@
 /* Begin PBXFileReference section */
 		2612E4E61AFBB0E80064B687 /* SensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewController.swift; sourceTree = "<group>"; };
 		2612E4E81AFBB1C70064B687 /* SensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
-		262465E21AFD810C0047B5EE /* SensorTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell2.swift; sourceTree = "<group>"; };
+		262465E21AFD810C0047B5EE /* SensorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
 		2637CCD71AFC06F000866422 /* TemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorManager.swift; sourceTree = "<group>"; };
 		26B97E2C1AFBADB300E24BC5 /* Rosa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rosa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +49,6 @@
 		26B97E461AFBADB400E24BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B97E471AFBADB400E24BC5 /* RosaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaTests.swift; sourceTree = "<group>"; };
 		DA159BB11AFBF8930059A3AB /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
-		DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
 		DA159BB51AFC084B0059A3AB /* databaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = databaseConnector.swift; sourceTree = "<group>"; };
 		DAFBAFDE1AFC1F3F0035FEDC /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DAFBAFE01AFC1F4B0035FEDC /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
@@ -101,14 +99,13 @@
 				2637CCD71AFC06F000866422 /* TemperatureView.swift */,
 				DAFBAFDE1AFC1F3F0035FEDC /* CameraViewController.swift */,
 				26442CBD1AFC4D8F00014BD7 /* SensorManager.swift */,
-				262465E21AFD810C0047B5EE /* SensorTableViewCell2.swift */,
+				262465E21AFD810C0047B5EE /* SensorTableViewCell.swift */,
 				DAFBAFE01AFC1F4B0035FEDC /* TemperatureViewController.swift */,
 				26B97E351AFBADB300E24BC5 /* Main.storyboard */,
 				26B97E381AFBADB300E24BC5 /* Images.xcassets */,
 				26B97E3A1AFBADB400E24BC5 /* LaunchScreen.xib */,
 				26B97E2F1AFBADB300E24BC5 /* Supporting Files */,
 				DA159BB11AFBF8930059A3AB /* Sensor.swift */,
-				DA159BB31AFBFB3E0059A3AB /* SensorTableViewCell.swift */,
 				DA159BB51AFC084B0059A3AB /* databaseConnector.swift */,
 			);
 			path = Rosa;
@@ -240,9 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2612E4E71AFBB0E80064B687 /* SensorTableViewController.swift in Sources */,
-				DA159BB41AFBFB3E0059A3AB /* SensorTableViewCell.swift in Sources */,
 				DA159BB61AFC084B0059A3AB /* databaseConnector.swift in Sources */,
-				262465E31AFD810C0047B5EE /* SensorTableViewCell2.swift in Sources */,
+				262465E31AFD810C0047B5EE /* SensorTableViewCell.swift in Sources */,
 				DA159BB21AFBF8930059A3AB /* Sensor.swift in Sources */,
 				26442CBE1AFC4D8F00014BD7 /* SensorManager.swift in Sources */,
 				2612E4E91AFBB1C70064B687 /* SensorViewController.swift in Sources */,

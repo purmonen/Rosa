@@ -147,49 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SensorTableViewCell" id="eSU-VZ-KPw" customClass="SensorTableViewCell" customModule="Rosa" customModuleProvider="target">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSU-VZ-KPw" id="D4V-cG-t0v">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="192.123.234.3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEb-Yk-3Yr">
-                                            <rect key="frame" x="18" y="8" width="110" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="●" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N93-t1-bHo">
-                                            <rect key="frame" x="574" y="8" width="18" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                            <color key="textColor" red="0.1137254909" green="0.70588237050000002" blue="0.79607844350000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="13.1°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUH-jH-ejq">
-                                            <rect key="frame" x="518" y="13" width="46" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="nEb-Yk-3Yr" firstAttribute="centerY" secondItem="HUH-jH-ejq" secondAttribute="centerY" id="3oP-jv-hiG"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="N93-t1-bHo" secondAttribute="trailing" id="FQA-Nc-5Ii"/>
-                                        <constraint firstItem="nEb-Yk-3Yr" firstAttribute="leading" secondItem="D4V-cG-t0v" secondAttribute="leadingMargin" constant="10" id="Hdv-xz-qBf"/>
-                                        <constraint firstItem="N93-t1-bHo" firstAttribute="leading" secondItem="HUH-jH-ejq" secondAttribute="trailing" constant="10" id="XGh-hg-G7Y"/>
-                                        <constraint firstItem="N93-t1-bHo" firstAttribute="top" secondItem="D4V-cG-t0v" secondAttribute="topMargin" id="ZaJ-yB-mmv"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="nEb-Yk-3Yr" secondAttribute="bottom" id="nvX-I0-YCT"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="N93-t1-bHo" secondAttribute="bottom" id="w8s-mx-KKG"/>
-                                        <constraint firstItem="nEb-Yk-3Yr" firstAttribute="top" secondItem="D4V-cG-t0v" secondAttribute="topMargin" id="yCn-T1-Kl0"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="connectedLabel" destination="N93-t1-bHo" id="0w0-N9-5mD"/>
-                                    <outlet property="nameLabel" destination="nEb-Yk-3Yr" id="2Jk-5k-Nwb"/>
-                                    <outlet property="temperatureLabel" destination="HUH-jH-ejq" id="XWa-y1-ssy"/>
-                                    <segue destination="f5z-gR-P6i" kind="showDetail" id="Lpx-Jp-dzc"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SensorTableViewCell2" rowHeight="80" id="pk4-PR-0zD" customClass="SensorTableViewCell2" customModule="Rosa" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SensorTableViewCell" rowHeight="80" id="pk4-PR-0zD" customClass="SensorTableViewCell" customModule="Rosa" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pk4-PR-0zD" id="mtz-bp-N5q">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -365,6 +323,6 @@
         <image name="over_big" width="640" height="480"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lpx-Jp-dzc"/>
+        <segue reference="02K-N2-Mam"/>
     </inferredMetricsTieBreakers>
 </document>
