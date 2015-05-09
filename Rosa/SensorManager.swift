@@ -43,4 +43,8 @@ class _SensorManager: NSObject {
                 println("Delegates count: \(self.delegates.count)")
         }
     }
+    
+    func getTemperaturesForIp(name: String) -> [Double] {
+        return DatabaseConnector().getAllTemperaturesForIp(name)
+    }
 }
